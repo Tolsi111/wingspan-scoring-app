@@ -61,6 +61,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "hmr": false
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {

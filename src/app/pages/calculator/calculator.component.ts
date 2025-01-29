@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PlayerModel } from '../../models/player.model';
 
 @Component({
   selector: 'app-calculator',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.scss'
 })
-export class CalculatorComponent {
+export class CalculatorComponent implements OnInit {
+  players: PlayerModel[] = [];
 
+  ngOnInit() {
+    this.players.push(new PlayerModel());
+  }
 }

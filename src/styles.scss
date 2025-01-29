@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@use "app/styles/base" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  // Container size includes padding and border (they do not expand the element)
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-family;
+  background-color: $color-background;
+  overflow: hidden;
+  overscroll-behavior: none;
+  line-height: normal;
+}

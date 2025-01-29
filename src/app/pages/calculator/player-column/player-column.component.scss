@@ -1,0 +1,14 @@
+@use "../../../styles/base.scss" as *;
+
+.col-wrapper {
+  display: grid;
+  grid-template-rows: $grid-rows-setup;
+  grid-template-columns: 1fr;
+
+  > div {
+    //TODO: this is for debugging purposes only
+    border: 1px dashed gray;
+    display: flex;
+    align-items: center;
+  }
+}

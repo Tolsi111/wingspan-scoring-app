@@ -1,13 +1,20 @@
 @use "../../styles/base.scss" as *;
 
 // General styles
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: grid;
-  grid-template-rows: repeat(9, 50px);
+  grid-template-rows: $grid-rows-setup;
   grid-template-columns: 1fr 1fr;
   //   gap: 1px;
 
   > div {
+    //TODO: this is for debugging purposes only
     border: 1px dashed gray;
     display: flex;
     align-items: center;

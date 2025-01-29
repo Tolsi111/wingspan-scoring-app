@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
+import { PlayerModel } from '../../../models/player.model';
 
 @Component({
   selector: 'app-player-column',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './player-column.component.html',
   styleUrl: './player-column.component.scss'
 })
-export class PlayerColumnComponent {
+export class PlayerColumnComponent implements OnInit {
+  player = input.required<PlayerModel>()
 
+  ngOnInit() {
+    this.player()
+  }
 }

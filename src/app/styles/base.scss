@@ -8,3 +8,7 @@ $color-brown-dark: #493628;
 $font-family: "Trebuchet MS", sans-serif;
 $font-size-xbig: 1.538rem;
 $font-size-big: 1.153rem;
+
+// Calculator grid setup
+$grid-row-height: 50px;
+$grid-rows-setup: repeat(9, $grid-row-height);

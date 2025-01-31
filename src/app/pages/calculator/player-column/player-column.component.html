@@ -1,29 +1,29 @@
-<div class="col-wrapper">
+<form [formGroup]="form()" class="col-wrapper">
   <div class="player-name">
-    <h3>{{ player().name }}</h3>
+    <input formControlName="name" />
   </div>
   <div class="birds">
-    <p>{{ player().birds }}</p>
+    <input type="number" formControlName="birds" />
   </div>
   <div class="bonus-cards">
-    <p>{{ player().bonusCards }}</p>
+    <input type="number" formControlName="bonusCards" />
   </div>
   <div class="end-of-round-goals">
-    <p>{{ player().endOfRoundGoals }}</p>
+    <input type="number" formControlName="endOfRoundGoals" />
   </div>
   <div class="eggs">
-    <p>{{ player().eggs }}</p>
+    <input type="number" formControlName="eggs" />
   </div>
   <div class="food-on-cards">
-    <p>{{ player().foodOnCards }}</p>
+    <input type="number" formControlName="foodOnCards" />
   </div>
   <div class="tucked-cards">
-    <p>{{ player().tuckedCards }}</p>
+    <input type="number" formControlName="tuckedCards" />
   </div>
   <div class="nectar">
-    <p>{{ player().nectar }}</p>
+    <input type="number" formControlName="nectar" />
   </div>
   <div class="total">
-    <p>{{ player().total }}</p>
+    <p>{{ totalScore() }}</p>
   </div>
-</div>
+</form>

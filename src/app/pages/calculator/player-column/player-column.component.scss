@@ -8,7 +8,9 @@
   > div {
     //TODO: this is for debugging purposes only
     border: 1px dashed gray;
+    min-width: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }

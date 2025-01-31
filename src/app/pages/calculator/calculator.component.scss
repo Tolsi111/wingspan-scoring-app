@@ -10,8 +10,7 @@
 .container {
   display: grid;
   grid-template-rows: $grid-rows-setup;
-  grid-template-columns: 1fr 1fr;
-  //   gap: 1px;
+  grid-template-columns: 50px 1fr;
 
   > div {
     //TODO: this is for debugging purposes only
@@ -24,6 +23,10 @@
 h1,
 h2 {
   font-size: $font-size-xbig;
+}
+
+h3 {
+  white-space: nowrap;
 }
 
 h3,

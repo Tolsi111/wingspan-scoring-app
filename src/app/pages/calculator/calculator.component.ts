@@ -13,7 +13,5 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit() {
     this.players.push(new PlayerModel());
-    this.players.push(new PlayerModel());
-    this.players.push(new PlayerModel());
   }
 }

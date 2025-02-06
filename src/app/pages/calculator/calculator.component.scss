@@ -1,0 +1,70 @@
+@use "../../styles/base.scss" as *;
+
+// General styles
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: $grid-rows-setup;
+  grid-template-columns: 50px 1fr;
+
+  > div {
+    //TODO: this is for debugging purposes only
+    border: 1px dashed gray;
+    display: flex;
+    align-items: center;
+  }
+}
+
+h1,
+h2 {
+  font-size: $font-size-xbig;
+}
+
+h3 {
+  white-space: nowrap;
+}
+
+h3,
+h4 {
+  font-size: $font-size-big;
+}
+
+// Grid areas
+.header {
+  grid-column: 1/3;
+  justify-content: center;
+}
+
+.amount-on-cards {
+  grid-row: 2/5;
+}
+
+.one-point-each {
+  grid-row: 5/8;
+}
+
+.nectar-points {
+  grid-row: 8/9;
+}
+
+.total {
+  grid-row: 9/10;
+  grid-column: 1/3;
+  justify-content: center;
+}
+// End of grid areas
+
+.amount-on-cards,
+.one-point-each,
+.nectar-points {
+  justify-content: center;
+}
+
+.info-label {
+  transform: rotate(-90deg);
+}

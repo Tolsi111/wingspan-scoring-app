@@ -1,11 +1,17 @@
-export class PlayerModel {
-    name: string = '';
-    birds: number = 0;
-    bonusCards: number = 0;
-    endOfRoundGoals: number = 0;
-    eggs: number = 0;
-    foodOnCards: number = 0;
-    tuckedCards: number = 0;
-    nectar: number = 0;
-    total: number = 0;
-}
+export const WingspanPlayerTemplate = [
+  'name',
+  'birds',
+  'bonusCards',
+  'endOfRoundGoals',
+  'eggs',
+  'foodOnCards',
+  'tuckedCards',
+  'nectar',
+] as const;
+
+export const GenericPlayerTemplate = [
+  'name',
+  'points1',
+  'points2',
+  'points3',
+] as const;

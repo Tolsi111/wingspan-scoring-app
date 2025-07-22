@@ -1,29 +1,17 @@
-<form [formGroup]="form()" class="col-wrapper">
-  <div class="player-name">
-    <input formControlName="name" />
+<form [formGroup]="player()" class="col-wrapper">
+  @for (control of controlNames; track $index) {
+  <div>
+    <input
+      [type]="control === 'name' ? 'text' : 'number'"
+      [attr.min]="control === 'name' ? null : 0"
+      [attr.step]="control === 'name' ? null : 1"
+      [formControlName]="control"
+      [placeholder]="control"
+      [attr.aria-label]="control"
+    />
   </div>
-  <div class="birds">
-    <input type="number" formControlName="birds" />
-  </div>
-  <div class="bonus-cards">
-    <input type="number" formControlName="bonusCards" />
-  </div>
-  <div class="end-of-round-goals">
-    <input type="number" formControlName="endOfRoundGoals" />
-  </div>
-  <div class="eggs">
-    <input type="number" formControlName="eggs" />
-  </div>
-  <div class="food-on-cards">
-    <input type="number" formControlName="foodOnCards" />
-  </div>
-  <div class="tucked-cards">
-    <input type="number" formControlName="tuckedCards" />
-  </div>
-  <div class="nectar">
-    <input type="number" formControlName="nectar" />
-  </div>
+  }
   <div class="total">
-    <p>{{ totalScore() }}</p>
+    <p>{{ total() }}</p>
   </div>
 </form>

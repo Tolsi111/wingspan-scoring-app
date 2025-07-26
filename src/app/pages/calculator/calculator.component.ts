@@ -29,7 +29,7 @@ export class CalculatorComponent implements OnInit {
           '',
           key === 'name'
             ? Validators.required
-            : [Validators.required, Validators.pattern(/^[1-9][0-9]*$/)]
+            : [Validators.required, Validators.pattern(/^(0|[1-9][0-9]*)$/)]
         )
       );
     });

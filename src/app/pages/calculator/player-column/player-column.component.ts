@@ -19,6 +19,7 @@ export class PlayerColumnComponent implements OnInit {
   player = input.required<FormGroup>();
   controlNames: string[] = [];
   total = signal<number>(0);
+  showTotal = signal<boolean>(false);
 
   private destroyRef = inject(DestroyRef);
   private calculatorService = inject(CalculatorService);
@@ -40,5 +41,9 @@ export class PlayerColumnComponent implements OnInit {
     this.destroyRef.onDestroy(() => {
       totalScoreSub.unsubscribe();
     });
+  }
+
+  toggleViewTotal() {
+    this.showTotal.set(!this.showTotal());
   }
 }

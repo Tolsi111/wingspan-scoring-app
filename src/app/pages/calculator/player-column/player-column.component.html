@@ -1,17 +1,27 @@
 <form [formGroup]="player()" class="col-wrapper">
   @for (control of controlNames; track $index) {
-  <div>
+  <div class="input-group">
     <input
       [type]="control === 'name' ? 'text' : 'number'"
-      [attr.min]="control === 'name' ? null : 0"
-      [attr.step]="control === 'name' ? null : 1"
       [formControlName]="control"
-      [placeholder]="control"
       [attr.aria-label]="control"
+      [class.has-value]="player().get(control)?.value"
     />
+    <span class="bar"></span>
+    <label [htmlFor]="control">{{ control }}</label>
   </div>
   }
   <div class="total">
-    <p>{{ total() }}</p>
+    <span>Total: {{ showTotal() ? total() : "?" }}</span>
+    @if (showTotal()) {
+    <img
+      (click)="toggleViewTotal()"
+      src="view-hide.svg"
+      width="30"
+      height="30"
+    />
+    } @else {
+    <img (click)="toggleViewTotal()" src="view.svg" width="30" height="30" />
+    }
   </div>
 </form>

@@ -1,34 +1,8 @@
+<h1>Wingspan</h1>
 <main class="wrapper">
-  <!-- TODO: build a page for this component. This calculator.component should be used on that page -->
-  <div class="container">
-    <!-- Header -->
-    <div class="header">
-      <h1>Player name</h1>
-    </div>
-    <!-- Info column -->
-    <div class="amount-on-cards">
-      <h3 class="info-label">amount on cards</h3>
-    </div>
-    <div class="one-point-each">
-      <h3 class="info-label">one point each</h3>
-    </div>
-    <div class="nectar-points"><h3 class="info-label">5/2</h3></div>
-    <!-- Label column -->
-    <div class="birds"><h4>birds</h4></div>
-    <div class="bonus-cards"><h4>bonus-cards</h4></div>
-    <div class="end-of-round-goals"><h4>end-of-round-goals</h4></div>
-    <div class="eggs"><h4>eggs</h4></div>
-    <div class="food-on-cards"><h4>food-on-cards</h4></div>
-    <div class="tucked-cards"><h4>tucked-cards</h4></div>
-    <div class="nectar"><h4>nectar</h4></div>
-    <!-- Total -->
-    <div class="total">
-      <h2>Total</h2>
-    </div>
-  </div>
   @for (player of players(); track $index) {
   <app-player-column [player]="player" />
   }
-  <button (click)="addPlayer()">Add</button>
+  <button (click)="addPlayer()">Add player</button>
   <button (click)="submitScore()">Submit</button>
 </main>
